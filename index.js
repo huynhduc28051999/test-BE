@@ -1,9 +1,10 @@
 const express = require('express')
 const app = express()
 const port = 4000
-
+var cors = require('cors')
 const authors = ['tac gia 1', 'tac gia 2', 'tac gia 3']
 
+app.use(cors())
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
